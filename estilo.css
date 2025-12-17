@@ -1,0 +1,36 @@
+
+.jumbotron-petshop {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Configuración inicial: ocultas */
+.pet-img {
+  position: absolute;
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Tamaños separados */
+.pet-img-left {
+  top: -150px;   /* gato empieza arriba */
+  left: 20px;
+  width: 220px;  /*tamaño del gato */
+}
+
+.pet-img-right {
+  bottom: -150px; /* perro empieza abajo */
+  right: 10px;
+  width: 370px;   /*tamaño del perro */
+}
+
+/* Animación al pasar el mouse */
+.jumbotron-petshop:hover .pet-img-left {
+  transform: translateY(150px); /* gato baja */
+  opacity: 1;
+}
+
+.jumbotron-petshop:hover .pet-img-right {
+  transform: translateY(-150px); /* perro sube */
+  opacity: 1;
+}
